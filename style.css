@@ -19,14 +19,26 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+svg {
+    height: 2rem;
+    width: 2rem;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    background-color: inherit;
+    border: 0;
+    padding: 0;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 6fr;
+    
 }
 
 .container div {
@@ -38,6 +50,47 @@ body {
     display: grid;
     grid-template-columns: 4fr 3fr;
     grid-template-rows: 1fr 2fr;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: .5rem .5rem;
+    grid-area: 1/1/2/3;
+}
+
+.searchbar form {
+    flex: 1;
+    display: flex;
+}
+
+.searchbar h1 {
+    font-weight: bold;
+}
+
+.material-symbols-outlined {
+    color: grey;
+}
+
+.material-symbols-outlined:hover {
+    color:black;
+}
+
+.header input {
+    color: white;
+    background-color: grey;
+    border: 0 solid grey;
+    border-radius: 15px;
+    height: 1.2rem;
+    padding: 0.1rem 0.5rem;
+    margin: 0rem 0.5rem;
+    flex: 1;
+}
+
+.header input:active {
+    border: 2px solid lightblue;
 }
 
 .header ul {
@@ -80,4 +133,11 @@ body {
 
 .content {
     grid-area: 2/2/3/3;
+}
+
+.searchbar img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    
 }
