@@ -42,22 +42,27 @@ button {
 }
 
 .container div {
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
 }
 
 .header {
     grid-area: 1/2/2/3;
     display: grid;
     grid-template-columns: 4fr 3fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: fit-content(1fr) fit-content(2fr);
+    
 }
 
-.searchbar {
+.searchbar,
+.hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
     padding: .5rem .5rem;
+}
+
+.searchbar {
     grid-area: 1/1/2/3;
 }
 
@@ -93,13 +98,35 @@ button {
     border: 2px solid lightblue;
 }
 
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    height: 5rem;
+}
+
+.hero p {
+    grid-area: 1/2/2/3;
+    margin: 1rem .5rem 0;
+}
+
+.hero .username {
+    grid-area: 2/2/3/3;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 .5rem;
+}
+
 .header ul {
-    padding: 20px;
+    padding: .5rem;
     display: flex;
     list-style: none;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+    height: 5rem;
 }
 
 .header li {
@@ -117,6 +144,7 @@ button {
 
 .sidebar {
     grid-area: 1/1/3/2;
+    background-color: rgb(70, 70, 255);
 }
 
 .sidebar .title {
@@ -133,11 +161,21 @@ button {
 
 .content {
     grid-area: 2/2/3/3;
+    background-color: rgb(178, 203, 204);
+    box-shadow: .1rem .4rem .5rem -.5rem rgb(53, 53, 53) inset;
+}
+
+.profilepic {
+    border-radius: 50%;
 }
 
 .searchbar img {
     height: 3rem;
     width: 3rem;
-    border-radius: 50%;
-    
+}
+
+.hero img {
+    height: 5rem;
+    width: 5rem;
+    grid-area: 1/1/3/2;
 }
