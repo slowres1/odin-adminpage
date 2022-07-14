@@ -37,7 +37,7 @@ button {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 3fr;
     
 }
 
@@ -142,6 +142,21 @@ button {
     align-items: center;
 }
 
+.profilepic {
+    border-radius: 50%;
+}
+
+.searchbar img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.hero img {
+    height: 5rem;
+    width: 5rem;
+    grid-area: 1/1/3/2;
+}
+
 .sidebar {
     grid-area: 1/1/3/2;
     background-color: rgb(70, 70, 255);
@@ -191,19 +206,19 @@ button {
     grid-area: 2/2/3/3;
     background-color: rgb(178, 203, 204);
     box-shadow: .1rem .4rem .5rem -.5rem rgb(53, 53, 53) inset;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.profilepic {
-    border-radius: 50%;
-}
-
-.searchbar img {
-    height: 3rem;
-    width: 3rem;
-}
-
-.hero img {
-    height: 5rem;
-    width: 5rem;
+.content .projects {
     grid-area: 1/1/3/2;
+}
+
+.content .announcements {
+    grid-area: 1/2/2/3;
+}
+
+.content .trending {
+    grid-area: 2/2/3/3;
 }
